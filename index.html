@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/860e7596f3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="audio-container ">
+        <h1><b>Ninja Music Player</b></h1>
+      
+        <div class="music-info">
+            <h2 id='title' class="audio-title">GPAY</h2>
+            <h6 id ='artist' class="audio-singer">RAAAGHAV</h6>
+            <div class="audio-progress">
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                    <div class="progress-head"></div>
+                </div>
+                <div class="current-time">00:00</div>
+                <div class="duration">00:00</div>
+            </div>
+        </div>
+        <audio src="trap+drill 08-10.mp3" id="audio"></audio>
+        <div class="audio-img">
+            <img src="images/beat1.jpg" alt="" class="img" id="cover">
+        </div>
+        <div class="audio-btns">
+
+            <button id="forward" class="action-btn">
+                <i class="fas fa-backward-step"></i>
+            </button>
+
+            <button id="btn-play" class="action-btn action-btn-big">
+                <span> <i class="fas fa-play"></i> </span>
+            </button>
+
+            <button id="btn-skip-forward" class="action-btn">
+                <i class="fas fa-forward-step"></i>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

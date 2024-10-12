@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .music-info {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 15px 15px 0;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: calc(100% - 40px);
+            opacity: 0;
+            padding: 10px 10px 10px 150px;
+            transform: translateY(0%);
+            transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+        }
+
+        .music-info  {
+            margin: 0;
+        }
+
+        .audio-container.play .music-info {
+            opacity: 1;
+            transform: translateY(-100%);
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            background-image: linear-gradient(0deg, rgb(247, 247, 247) 23.8%, rgb(252, 221, 221) 92%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .audio-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+            display: flex;
+            padding: 20px;
+            position: relative;
+            margin: 100px 0;
+            z-index: 10;
+        }
+
+        .audio-img {
+            position: relative;
+            width: 110px;
+        }
+
+        .audio-img img {
+            width: inherit;
+            height: 110px;
+            border-radius: 20px;
+            object-fit: cover;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        h1 {
+            position: fixed;
+            font-family: 'Roboto', sans-serif;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        h2 {
+            text-decoration: none;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            text-transform:capitalize;
+        }
+        h6{
+            text-decoration: none;
+            color: rgba(71, 70, 70, 0.795);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+
+        .audio-btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .action-btn {
+            background-color: white;
+            border: 0;
+            color: #dfdbdf;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0 20px;
+        }
+
+        .action-btn-big {
+            color: #cdc2d0;
+            font-size: 30px;
+        }
+
+        .progress {
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+            height: 4px;
+            width: 100%;
+             transition: position 0.5s ease-in-out, bottom 0.5s ease-in-out; /* Smooth position change */
+
+        }
+
+        .progress-bar {
+            background-color: #fe8daa;
+            border-radius: 5px;
+            height: 100%;
+            width: 50%;
+            transform: width 0.1s linear;
+        }
+        .audio-img img {
+            width: inherit;
+            height: 110px;
+            border-radius: 20px;
+            object-fit: cover;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+           
+        }
+        #cover {
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+        }
+        .pulse {
+            animation: pulse 1.5s infinite ease-in-out; /* Smooth pulse animation */
+        }
+        
+        /* Keyframe for pulse effect */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05); /* Scale up at 50% */
+            }
+            100% {
+                transform: scale(1); /* Scale back to normal */
+            }
+        }
+        .duration{
+            text-align: right;
+            transform: translateY(-19px);
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+            
+        }
+        .current-time{
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+
+        }
+      
