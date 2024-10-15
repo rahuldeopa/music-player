@@ -33,11 +33,11 @@ const tracks = [
 
 let songId = 0;
 
-function loadTrack(track) {
-    title.innerText = track.name;
-    artist.innerText = track.artist;
-    audio.src = `music/${track.source}`;
-    cover.src = `images/${track.cover}`;
+function loadTrack(tracks) {
+    title.innerText = tracks.name;
+    artist.innerText = tracks.artist;
+    audio.src = `music/${tracks.source}`;
+    cover.src = `images/${tracks.cover}`;
     audio.load();
 }
 
